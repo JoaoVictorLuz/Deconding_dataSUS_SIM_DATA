@@ -15,7 +15,7 @@ total_de_arquivos_baixados = 0
 
 for ftp_file in lista_de_arquivos:
     try:
-        sim.download(ftp_file, local_dir='/home/joao/pysus/projeto/Parquet_files')
+        sim.download(ftp_file, local_dir='Parquet_files')
         total_de_arquivos_baixados += 1
     except Exception as e:
         print(f"Erro ao baixar {ftp_file}: {e}")

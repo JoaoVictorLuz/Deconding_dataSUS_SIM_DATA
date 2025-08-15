@@ -11,7 +11,7 @@ SNOWFLAKE_WAREHOUSE = "COMPUTE_WH"
 SNOWFLAKE_DATABASE = "DATASUS"
 SNOWFLAKE_SCHEMA = "PUBLIC"
 STAGE_NAME = "DO_DATA"
-CSV_DIR = "/home/joao/pysus/projeto/Csv_files"
+CSV_DIR = "Csv_files"
 
 
 conn = snowflake.connector.connect(
