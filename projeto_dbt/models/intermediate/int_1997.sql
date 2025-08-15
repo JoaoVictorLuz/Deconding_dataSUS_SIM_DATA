@@ -1,0 +1,45 @@
+with do_1997 as (
+    select 
+    {{decode_tipobito('TIPOBITO')}} as tipobito,
+    DTOBITO,
+    CODIGO_MUNICIPIO_NATURAL,
+    DTNASC,
+    IDADE,
+    {{decode_sexo('SEXO')}} as sexo,
+    {{decode_racacor('RACACOR')}} as racacor,
+    ESTCIV,
+    {{decode_esc('ESC')}} as escolaridade,
+    OCUP,
+    CODIGO_MUNICIPIO_RESIDENCIA,
+    LOCAL_DO_OBITO,
+    CODIGO_MUNICIPIO_OBITO,
+    IDADEMAE,
+    ESCOLARIDADE_DA_MAE,
+    OCUPMAE,
+    QTDFILVIVO,
+    QTDFILMORT,
+    TIPO_GRAVIDEZ,
+    SEMANAS_DE_GESTACAO,
+    TIPO_DE_PARTO,
+    OBITOPARTO,
+    PESO,
+    OBITO_GRAVIDEZ,
+    OBITOPUERP,
+    ASSISTMED,
+    FEZ_EXAME,
+    FEZ_CIRURGIA,
+    NECROPSIA,
+    LINHAA,
+    LINHAB,
+    LINHAC,
+    CID_LINHAD,
+    LINHAII,
+    CAUSABAS,
+    TIPO_MORTE_NAO_NATURAL,
+    ACIDTRAB,
+    FONTE_DA_INFORMACAO
+    from {{ ref('stg_1997') }}
+)
+
+select *
+from do_1997
