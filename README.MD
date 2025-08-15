@@ -8,5 +8,3 @@ O objetivo é construir um **pipeline de dados completo**.
 ---
 
 ![Arquitetura do projeto](readme_assets/mapa.jpg)
-
-[Texto do link](URL)
