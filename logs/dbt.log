@@ -94,3 +94,19 @@ Happy modeling!
 [0m14:00:10.336084 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f02b311b320>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f02b99fb800>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f02b3d52a20>]}
 [0m14:00:10.336580 [debug] [MainThread]: Flushing usage events
 [0m14:00:11.155370 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:19:40.477652 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8a563ba960>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8a57feeb10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8a55b84ad0>]}
+
+
+============================== 14:19:40.482295 | 7d792f61-e1b2-4c15-b0b0-1a01a5a68427 ==============================
+[0m14:19:40.482295 [info ] [MainThread]: Running with dbt=1.10.7
+[0m14:19:40.483013 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/joao/.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt show --select int_test.sql', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m14:19:40.483547 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/joao/pysus/projeto/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m14:19:40.484373 [debug] [MainThread]: Resource report: {"command_name": "show", "command_success": false, "command_wall_clock_time": 0.09087795, "process_in_blocks": "288", "process_kernel_time": 0.072052, "process_mem_max_rss": "99080", "process_out_blocks": "16", "process_user_time": 1.425046}
+[0m14:19:40.484837 [debug] [MainThread]: Command `dbt show` failed at 14:19:40.484730 after 0.09 seconds
+[0m14:19:40.485227 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8a558514f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8a5670c5f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8a5670f8f0>]}
+[0m14:19:40.485621 [debug] [MainThread]: Flushing usage events
+[0m14:19:41.025963 [debug] [MainThread]: An error was encountered while trying to flush usage events
