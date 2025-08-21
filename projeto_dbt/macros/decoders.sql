@@ -71,13 +71,6 @@
     end
 {% endmacro %}
 
-{% macro decode_qtdfil(col) %}
-    case trim({{col}})
-        when '9' then 0
-        else cast(trim({{col}}) as number(3,0))
-    end
-{% endmacro %}
-
 {% macro decode_gravidez(col) %}
     case trim({{col}})
         when '1' then 'única'
@@ -146,6 +139,14 @@
         when '4' then 'outra'
         when '9' then 'ignorado'
         else null
+    end
+{% endmacro %}
+
+{% macro decode_number_clean(col) %}
+    case
+        when trim({{col}}) in ('A', '0 00', '4+') then null
+        when trim({{col}}) = '' then null
+        else try_cast(trim({{col}}) as number(5,0))
     end
 {% endmacro %}
 
